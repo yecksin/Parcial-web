@@ -1,38 +1,66 @@
-#example-page{
-    color: aqua;
-    .bigAssDiv{
-        width: 100vw;
-        height: 1500px;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .box, .TDBox{
-            position: fixed;
-            top: 80px;
-            width: 40px;
-            height: 40px;
-            background-color: burlywood;
-            opacity: 0;
+.nav-container{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(100, 104, 104, 0.199);
+    padding: 0px 50px;
+    .nav{
+        width: 100%;
+        height: 100%;
+        // background-color: rgb(255, 30, 0); 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        .item-container{
+            // box-sizing: border-box;
+            // border: 1px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .item{
+                // background-color: pink;
+                cursor: pointer;
+            }
         }
-        .TDBox{
-            position: fixed;
-            top: 45vw;
-            transition: all 0.3s ease;
-        }
-        .tierra{
-            width: 100vw;
-            height: 50px;
-            background-color: burlywood;
-            position: fixed;
-            top: 120px;
-        }
-        .cloud {
-            width: 20px;
-            height: 10px;
-            background-color: cadetblue;
-            position: fixed;
-            top: 20px;
-        }
+
     }
 }
+
+
+
+// #example-page{
+//     color: aqua;
+//     .bigAssDiv{
+//         width: 100vw;
+//         height: 1500px;
+//         position: relative;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         .box, .TDBox{
+//             position: fixed;
+//             top: 80px;
+//             width: 40px;
+//             height: 40px;
+//             background-color: burlywood;
+//             opacity: 0;
+//         }
+//         .TDBox{
+//             position: fixed;
+//             top: 45vw;
+//             transition: all 0.3s ease;
+//         }
+//         .tierra{
+//             width: 100vw;
+//             height: 50px;
+//             background-color: burlywood;
+//             position: fixed;
+//             top: 120px;
+//         }
+//         .cloud {
+//             width: 20px;
+//             height: 10px;
+//             background-color: cadetblue;
+//             position: fixed;
+//             top: 20px;
+//         }
+//     }
+// }
