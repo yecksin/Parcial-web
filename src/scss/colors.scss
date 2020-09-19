@@ -1,0 +1,53 @@
+
+$Primary: #247ba0;
+$Secondary: #70c1b3;
+// $Tertiary:;
+// $Success:;
+$Warning: #FFE066;
+$Danger: #f25f5c;
+// $Light:;
+// $Medium:;
+$Dark:#50514f;
+
+
+.bg-Primary{
+    background-color: $Primary;
+}
+
+.font-Primary{
+    color: $Primary;
+}
+
+
+.bg-Secondary{
+    background-color: $Secondary;
+}
+
+.font-Secondary{
+    color: $Secondary;
+}
+
+.bg-Warning{
+    background-color: $Warning;
+}
+
+.font-Warning{
+    color: $Warning;
+}
+
+.bg-Dark{
+    background-color: $Dark;
+}
+
+.font-Dark{
+    color: $Dark;
+}
+
+
+.bg-Danger{
+    background-color: $Danger;
+}
+
+.font-Danger{
+    color: $Danger;
+}
