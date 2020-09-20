@@ -53,8 +53,22 @@ export class ExamplePageController {
         //         TDBox.style.opacity = 0;
         //     }
         // }
+        // let element: HTMLElement =  document.querySelector(".audit")as HTMLElement;
+        // element.click();
+        // console.log(element.click());
+        const personaje: any = this.findInsideMe(".personaje");
+        let audit = document.querySelector(".audit") ;
+        audit.addEventListener('mouseover', function () {
+            
+            personaje.style.left = 0;
+        });
+        // document.querySelector(".audit").onclick = () => {
 
+        // };
 
+        // document.querySelector('#send_top').onclick = function() { 
+        //     alert('bla bla'); 
+        // }
 
         //animacion fadeinscroll
 
@@ -115,6 +129,11 @@ export class ExamplePageController {
         }
     }
 
+
+    showPersonaje()
+{
+    console.log("Show plloo");
+}
 
 
 
