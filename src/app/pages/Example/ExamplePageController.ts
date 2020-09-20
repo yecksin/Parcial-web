@@ -13,6 +13,21 @@ export class ExamplePageController {
     }
 
     start() {
+        const checkpoint = 300;
+        let opacity = 0;
+        window.addEventListener("scroll", () => {
+            const box: any = this.findInsideMe(".box");
+            console.log(window.pageYOffset+" "+ box.getBoundingClientRect().top);
+            const currentScroll = window.pageYOffset;
+            if (currentScroll <= checkpoint) {
+                opacity = 1 - currentScroll / checkpoint;
+            } else {
+                opacity = 0;
+            }
+            
+            box.style.opacity = opacity;
+        });
+
         // const box: any = this.findInsideMe(".box");
         // const TDBox: any = this.findInsideMe(".TDBox");
         // const clouds: any = this.findInsideMe(".cloud", true);
@@ -24,7 +39,7 @@ export class ExamplePageController {
 
         //     clouds[0].style.left = `${p * 2}%`;
         //     clouds[1].style.left = `${p * 1.3}%`;
-            
+
         //     if (window.scrollY >= 340) {
         //         TDBox.style.opacity = 1;
         //         if (window.scrollY >= 350) {
