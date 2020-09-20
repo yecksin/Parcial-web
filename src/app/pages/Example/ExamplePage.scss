@@ -156,6 +156,334 @@
     }
   }
 }
+.section-experiencias{
+  .texto{
+      width: 100%;
+      height: 100%;
+      h2{
+          //height: 60%;
+          font-size:4.5rem;
+      }
+      p{
+          font-size:2rem;      
+      }
+  }
+  .container-2{
+      width: 60%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      .containers{
+          width: 200px;
+          height: 280px;
+          padding: 5px;
+          transition: all 0.5s;
+          .img1, .img2, .img3, .img4{
+              // background-color: red;
+              width: 100%;
+              img{
+                  width: 60%;
+              }
+          }
+          .exp1, .exp2, .exp3, .exp4{
+              // background-color:aqua;
+              width: 100%;
+              height: 80%;
+              text-align: center;
+              h3{
+                  font-size:1.5rem;
+                  opacity: 0.8;
+              }
+              #bot{
+                  padding: 2.5px;
+                  font-size:1.1rem;
+                  cursor: pointer;
+                  &:hover{
+                      background-color: rgba(0, 0, 0, 0.288);
+                      border-radius: 10px;
+                  }
+              }
+          }
+      }
+  }
+}
+.section-habilidades{
+  background-color: white;
+      .post{
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+          .post1{
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-wrap:  wrap;
+              width: 100%;
+              height: 50%;
+              .photo :hover{
+                  animation: photo 1s 1;
+                  transform-origin: top center;
+              }
+              .prem :hover{
+                  animation: prem 1s 1;
+                  transform-origin: top center;
+              }
+              .audit :hover{
+                  animation: audit 1s 1;
+                  transform-origin: top center;
+              }
+              .illus :hover{
+                  animation: illus 1s 1;
+                  transform-origin: top center;
+              }
+              @keyframes photo {
+                  20%{
+                    transform: scale(0.9) rotate(-6deg);
+                  }
+                  30%, 70%{
+                    transform: scale(1.4) rotate(6deg);
+                  }
+                  50%, 90%{
+                    transform: scale(1.4) rotate(-6deg);
+                  }
+              }
+              @keyframes prem {
+                  20%{
+                      transform: scale(0.9) rotate(-6deg);
+                    }
+                    30%, 70%{
+                      transform: scale(1.4) rotate(6deg);
+                    }
+                    50%, 90%{
+                      transform: scale(1.4) rotate(-6deg);
+                    }
+              }
+              @keyframes audit {
+                  20%{
+                      transform: scale(0.9) rotate(-6deg);
+                    }
+                    30%, 70%{
+                      transform: scale(1.4) rotate(6deg);
+                    }
+                    50%, 90%{
+                      transform: scale(1.4) rotate(-6deg);
+                    }
+              }
+              @keyframes illus {
+                  20%{
+                      transform: scale(0.9) rotate(-6deg);
+                    }
+                    30%, 70%{
+                      transform: scale(1.4) rotate(6deg);
+                    }
+                    50%, 90%{
+                      transform: scale(1.4) rotate(-6deg);
+                    }
+              }
+              .photo{   
+                  margin-top: 20px;  
+                  margin-left: 10px;
+                  height: 80px;
+                  width: 80px;
+                  img{
+                      width: 100%;
+                  }
+              }
+              .prem{
+                  height: 95px;
+                  width: 95px;
+                  img{
+                      width: 100%;
+                  }
+              }
+              .audit{
+                  margin-top: -70px;
+                  margin-left: 150px;
+                  height: 80px;
+                  width: 80px;
+                  img{
+                      width: 100%;
+                  }
+              }
+              .illus{
+                  margin-top: -130px;
+                  margin-left: 120px;
+                  height: 80px;
+                  width: 200px;
+                  img{
+                      width: 40%;
+                  }
+              }
+          }
+          .post2{
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-wrap:  wrap;
+              width: 100%;
+              height: 50%;
+              .img1 :hover{
+                  animation: img1 1s 1;
+                  transform-origin: top center;
+              }
+              .img2 :hover{
+                  animation: img2 1s 1;
+                  transform-origin: top center;
+              }
+              .img3 :hover{
+                  animation: img3 1s 1;
+                  transform-origin: top center;
+              }
+              .img4 :hover{
+                  animation: img4 1s 1;
+                  transform-origin: top center;
+              }
+              @keyframes img1 {
+                  20%{
+                      transform: scale(0.9) rotate(-6deg);
+                    }
+                    30%, 70%{
+                      transform: scale(1.4) rotate(6deg);
+                    }
+                    50%, 90%{
+                      transform: scale(1.4) rotate(-6deg);
+                    }
+              }
+              @keyframes img2 {
+                  20%{
+                      transform: scale(0.9) rotate(-6deg);
+                    }
+                    30%, 70%{
+                      transform: scale(1.4) rotate(6deg);
+                    }
+                    50%, 90%{
+                      transform: scale(1.4) rotate(-6deg);
+                    }
+              }
+              @keyframes img3 {
+                  20%{
+                      transform: scale(0.9) rotate(-6deg);
+                    }
+                    30%, 70%{
+                      transform: scale(1.4) rotate(6deg);
+                    }
+                    50%, 90%{
+                      transform: scale(1.4) rotate(-6deg);
+                    }
+              }
+              @keyframes img4 {
+                  20%{
+                      transform: scale(0.9) rotate(-6deg);
+                    }
+                    30%, 70%{
+                      transform: scale(1.4) rotate(6deg);
+                    }
+                    50%, 90%{
+                      transform: scale(1.4) rotate(-6deg);
+                    }
+              }
+              .img1{     
+                  height: 100px;
+                  width: 100px;
+                  img{
+                      width: 100%;
+                  }
+              }
+              .img2{
+                  margin-left: -10px;
+                  margin-top: 30px;
+                  height: 80px;
+                  width: 80px;
+                  margin-right: 10px;
+                  img{
+                      width: 100%;
+                  }
+              }
+              .img3{
+                  margin-top: -90px;
+                  margin-left: 150px;
+                  height: 110px;
+                  width: 110px;
+                  img{
+                      width: 100%;
+                  }
+              }
+              .img4{
+                  margin-top: -30px;
+                  margin-left: 100px;
+                  height: 80px;
+                  width: 200px;
+                  img{
+                      width: 40%;
+                  }
+              }
+          }
+          
+      }
+      .texto{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          h2{
+              font-size:5rem;
+          }
+          p{
+              padding: 5px;
+          }
+      }
+  }
+  .grid-3{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+  }
+//animacion
+.containers:hover{
+  transform: translateY(-6px);
+  transition-duration: 0.3s;
+  animation: 1.5s mover-caja infinite;
+}
+.containers:before{
+  content: '';
+  background: radial-gradient(ellipse, 
+    rgba(0,0,0,0.35) 0%, 
+    rgba(0,0,0,0) 80%);
+  width: 90%;
+  height: 20px;
+  top: 100%;
+  left: 5%;
+  position: absolute;
+  opacity: 0;
+}
+.containers:hover:before{
+  opacity: 1;
+  transform: translateY(6px);
+  transition-duration: 0.3s;
+  animation: 1.5s mover-sombra infinite;
+}
+
+@keyframes mover-caja{ 
+  50%{ 
+    transform: translateY(-10px);
+  } 
+}
+@keyframes mover-sombra{
+  50%{
+    opacity: 1;
+    transform: translateY(10px) scale(0.9)
+  }
+}
+
+.grid-2-row{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
 
 .section-estudios {
   
