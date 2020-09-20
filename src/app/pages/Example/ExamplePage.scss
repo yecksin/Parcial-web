@@ -10,6 +10,7 @@
   height: 60px;
   // background-color: rgba(100, 104, 104, 0.199);
   padding: 0px 300px;
+  transition: all 0.5s;
   .nav {
     width: 100%;
     height: 100%;
@@ -98,7 +99,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     .carta-container {
-    //   border: 1px solid;
+      //   border: 1px solid;
       width: 100%;
       height: 600px;
       display: flex;
@@ -124,9 +125,8 @@
           width: 300px;
           background-color: $Danger;
           transition: all 0.3s ease-in-out;
-          &:hover{
-              
-             width: 700px;
+          &:hover {
+            width: 700px;
           }
           h2 {
             font-size: 2rem;
@@ -139,11 +139,11 @@
           p {
             color: white;
           }
-          button{
-              cursor: pointer;
-              margin-top: 40px;
-              color: white !important;
-              padding:10px 50px;
+          button {
+            cursor: pointer;
+            margin-top: 40px;
+            color: white !important;
+            padding: 10px 50px;
             background-color: rgba(255, 255, 255, 0);
             color: black;
             border: 2px solid #ffffff; /* Green */
@@ -152,6 +152,103 @@
         }
       }
     }
+  }
+}
+
+.section-estudios {
+  
+  .cuerpo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+    margin-bottom: 400px;
+    font-family: Raleway;
+    letter-spacing: 1px;
+  }
+
+  h1 {
+    position: absolute;
+    top: 70px;
+    padding-top: 20px;
+    margin: 0;
+    text-align: center;
+    animation-delay: 1s;
+    font-size: 4rem;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .title {
+    text-align: center;
+    color: #aaa;
+  }
+
+  .texto {
+    font-size: 10px;
+    color: red;
+    padding-left: 5px;
+    display: flex;
+  }
+
+  .padre {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    justify-items: center;
+    /*    cursor: pointer;*/
+    align-items: center;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .image__text {
+    position: absolute;
+    color: #ccc;
+    transition: transform 0.5s;
+    font-size: 1rem;
+    width: 95%;
+  }
+  .fadeInScroll {
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  .animado {
+    
+  
+    overflow: initial;
+    position: relative;
+    width: 100%;
+    max-width: 50%;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      position: relative;
+      transform-origin: right center;
+      transition: transform 0.5s;
+      z-index: 10;
+    }
+  }
+
+
+  .titulo {
+    opacity: 1;
+    transition: all 0.5s;
+  }
+
+  .trasladarArriba {
+    animation: desplazarArriba 1s;
   }
 }
 
@@ -181,41 +278,41 @@
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
 }
-// #example-page{
-//     color: aqua;
-//     .bigAssDiv{
-//         width: 100vw;
-//         height: 1500px;
-//         position: relative;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         .box, .TDBox{
-//             position: fixed;
-//             top: 80px;
-//             width: 40px;
-//             height: 40px;
-//             background-color: burlywood;
-//             opacity: 0;
-//         }
-//         .TDBox{
-//             position: fixed;
-//             top: 45vw;
-//             transition: all 0.3s ease;
-//         }
-//         .tierra{
-//             width: 100vw;
-//             height: 50px;
-//             background-color: burlywood;
-//             position: fixed;
-//             top: 120px;
-//         }
-//         .cloud {
-//             width: 20px;
-//             height: 10px;
-//             background-color: cadetblue;
-//             position: fixed;
-//             top: 20px;
-//         }
-//     }
-// }
+
+@keyframes desplazarArriba {
+  0% {
+    transform: translateY(-60px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.trasladoLateral {
+  animation: desplazarLateral 1s;
+}
+
+@keyframes desplazarLateral {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.fadeInScroll {
+  opacity: 0;
+  transition: all 0.5s;
+
+}
+
+  .fadeInScroll:hover {
+    img {
+      transform: scale(0.5) translateX(10px);
+    }
+    .image__text {
+      transform: translate(-100px);
+    }
+  }
