@@ -12,41 +12,41 @@ body{
 }
 
 
-#example-page{
-    color: aqua;
-    .bigAssDiv{
-        width: 100vw;
-        height: 1500px;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .box, .TDBox{
-            position: fixed;
-            top: 80px;
-            width: 40px;
-            height: 40px;
-            background-color: burlywood;
-            opacity: 0;
-        }
-        .TDBox{
-            position: fixed;
-            top: 45vw;
-            transition: all 0.3s ease;
-        }
-        .tierra{
-            width: 100vw;
-            height: 50px;
-            background-color: burlywood;
-            position: fixed;
-            top: 120px;
-        }
-        .cloud {
-            width: 20px;
-            height: 10px;
-            background-color: cadetblue;
-            position: fixed;
-            top: 20px;
-        }
-    }
-}
+// #example-page{
+//     color: aqua;
+//     .bigAssDiv{
+//         width: 100vw;
+//         height: 1500px;
+//         position: relative;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         .box, .TDBox{
+//             position: fixed;
+//             top: 80px;
+//             width: 40px;
+//             height: 40px;
+//             background-color: burlywood;
+//             opacity: 0;
+//         }
+//         .TDBox{
+//             position: fixed;
+//             top: 45vw;
+//             transition: all 0.3s ease;
+//         }
+//         .tierra{
+//             width: 100vw;
+//             height: 50px;
+//             background-color: burlywood;
+//             position: fixed;
+//             top: 120px;
+//         }
+//         .cloud {
+//             width: 20px;
+//             height: 10px;
+//             background-color: cadetblue;
+//             position: fixed;
+//             top: 20px;
+//         }
+//     }
+// }
