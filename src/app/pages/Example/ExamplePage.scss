@@ -25,6 +25,10 @@
       align-items: center;
       justify-content: center;
       .item {
+        a{
+          text-decoration: none;
+          color: white;
+        }
         // background-color: pink;
         cursor: pointer;
         font-weight: 600;
@@ -210,6 +214,7 @@
 }
 .section-habilidades{
   background-color: white;
+  padding: 100px 0px;
       .post{
           display: flex;
           flex-direction: column;
