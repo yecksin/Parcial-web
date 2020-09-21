@@ -1,7 +1,6 @@
 
 export class ExamplePageController {
     view: any;
-    animado: any;
     component = {
         id: 'example-page',
         view: 'ExamplePage.html',
@@ -113,19 +112,17 @@ export class ExamplePageController {
     getView(): [string, DocumentFragment] {
         return [this.component.id, document.createRange().createContextualFragment(this.view)];
     }
-
+    fade: any;
     mostrarScroll() {
         var h = window.innerHeight;
-        console.log(h);
-        this.animado = document.querySelectorAll(".fadeInScroll");
-        console.log("animado tamaño");
+        this.fade = document.querySelectorAll(".fadeInScroll"); //todos lo que tiene la clase fadeinscroll
         let scrollTop = document.documentElement.scrollTop; // scroll en Y (vertical) contando desde su parte inicial
-        console.log(this.animado.length);
-        for (var i = 0; i < this.animado.length; i++) { // animado.length es un array de todos los divs o compoenntes que tiene la clase .animado
-            let alturaAnimado = this.animado[i].offsetTop; // ubicacion del div contnado desde su parte superior
+        console.log(this.fade.length);
+        for (var i = 0; i < this.fade.length; i++) { // animado.length es un array de todos los divs o compoenntes que tiene la clase .animado
+            let alturaAnimado = this.fade[i].offsetTop; // ubicacion del div contnado desde su parte superior
             if (alturaAnimado - (h / 2) < scrollTop) {
-                this.animado[i].style.opacity = 1;
-                this.animado[i].classList.add("trasladarArriba");
+                this.fade[i].style.opacity = 1;
+                this.fade[i].classList.add("trasladarArriba");
             }
         }
     }

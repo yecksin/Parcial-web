@@ -1,14 +1,21 @@
 @media(max-width: 1920px){
     body{
-         background-color: rgb(93, 250, 106); 
+        //  background-color: rgb(93, 250, 106); 
     }
 
 
  
 }
-@media(max-width: 1200px){
+@media(max-width: 1400px){
     body{
-         background-color: yellow; 
+        //  background-color: yellow; 
+         .container{
+            padding: 60px 100px;
+        }
+    }
+
+    .titulo{
+        font-size: 3rem !important;
     }
 
 
@@ -16,7 +23,28 @@
 }
 @media(max-width: 992px){
     body{
-        background-color: rgb(255, 115, 0); 
+        // background-color: rgb(255, 115, 0); 
+        .container{
+            padding: 60px 15px;
+        }
+        .galeria{
+            grid-template-columns: 1fr !important;
+            // grid-template-rows: 1fr ;
+        }
+        .grid-2{
+            grid-template-columns: 1fr !important;
+        }
+        .texto {
+            margin-top: 50px;
+        }
+        .nav-container{
+            padding: 0px 10px;
+            .item{
+                font-size: 1rem !important;
+            }
+            
+           
+        }
     }
   
  
@@ -25,7 +53,7 @@
 
 @media(max-width: 600px){
     body{
-         background-color: rgb(255, 0, 0);
+        //  background-color: rgb(255, 0, 0);
      
     }
   

@@ -2,12 +2,28 @@
 $Primary: #247ba0;
 $Secondary: #70c1b3;
 // $Tertiary:;
-// $Success:;
+$Success: #00bcd4;
 $Warning: #FFE066;
 $Danger: #f25f5c;
 // $Light:;
 // $Medium:;
 $Dark:#50514f;
+
+.bg-white{
+    background-color: white;
+}
+
+.font-white{
+    color: white;
+}
+
+.bg-Success{
+    background-color: $Success;
+}
+
+.font-Success{
+    color: $Success;
+}
 
 
 .bg-Primary{
