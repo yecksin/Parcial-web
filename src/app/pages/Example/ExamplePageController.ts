@@ -13,7 +13,49 @@ export class ExamplePageController {
     }
 
     start() {
-        console.log(window.innerWidth);
+        
+        const yecksin: any = this.findInsideMe("#yecksin");
+        const jair: any = this.findInsideMe("#jair");
+        const pollo: any = this.findInsideMe("#pollo");
+        const tefa: any = this.findInsideMe("#tefa");
+        yecksin.style.backgroundImage = "url('/assets/imagenes/yecksin.jpg')"; 
+        jair.style.backgroundImage = "url('/assets/imagenes/jair.jpeg')"; 
+        pollo.style.backgroundImage = "url('/assets/imagenes/pollo.jpeg')"; 
+        tefa.style.backgroundImage = "url('/assets/imagenes/tefa.jpeg')"; 
+
+
+        //evento cuando la pagina est;á cargada
+        const pantallaDeCarga: any = this.findInsideMe(".pantallaDeCarga");
+        const pantallaDeCarga2: any = this.findInsideMe(".pantallaDeCarga2");
+        const pantallaDeCarga3: any = this.findInsideMe(".pantallaDeCarga3");
+        setTimeout(() => {
+            console.log("Cargado");
+            pantallaDeCarga3.style.left = "100vw";
+            // pantallaDeCarga2.style.left = "100vw";
+            setTimeout(() => {
+                console.log("Cargado");
+                // pantallaDeCarga.style.left = "0vw";
+                pantallaDeCarga2.style.left = "100vw";
+                setTimeout(() => {
+                    console.log("Cargado");
+                    pantallaDeCarga.style.left = "100vw";
+                    // pantallaDeCarga2.style.left = "100vw";
+    
+                }, 3000);
+            }, 3000);
+        }, 3000);
+
+ 
+       
+        // window.addEventListener('load', (event) => {
+        //     console.log('page is fully loaded');
+        //   });
+        //   window.addEventListener("DOMContentLoaded", function(event) {
+        //     console.log("DOM fully loaded and parsed");
+        //   });
+
+
+        //   window.addEventListener("scroll", this.mostrarScroll);
         // const checkpoint = 300;
 
         // let opacity = 0;
@@ -120,7 +162,7 @@ export class ExamplePageController {
         console.log(this.fade.length);
         for (var i = 0; i < this.fade.length; i++) { // animado.length es un array de todos los divs o compoenntes que tiene la clase .animado
             let alturaAnimado = this.fade[i].offsetTop; // ubicacion del div contnado desde su parte superior
-            if (alturaAnimado - (h / 2) < scrollTop) {
+            if (alturaAnimado - ((h / 2)) < scrollTop) {
                 this.fade[i].style.opacity = 1;
                 this.fade[i].classList.add("trasladarArriba");
             }
