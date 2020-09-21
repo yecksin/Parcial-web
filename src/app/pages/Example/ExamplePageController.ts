@@ -14,6 +14,7 @@ export class ExamplePageController {
     }
 
     start() {
+        console.log(window.innerWidth);
         // const checkpoint = 300;
 
         // let opacity = 0;
