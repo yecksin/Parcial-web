@@ -15,6 +15,13 @@ export class ExamplePageController {
 
   start() {
     this.seccionHabilidades();
+    // var video:any;
+    //  video=<HTMLProgressElement>document.getElementById("video");
+    //  var audio = new Audio('https://firebasestorage.googleapis.com/v0/b/phaserserver-af18d.appspot.com/o/audio.mp3?alt=media&token=955f137b-7701-46b7-9763-4ae6118a0efd');
+    //  audio.play();
+    // video.muted = !video.muted;
+
+    // video.muted = !video.muted;
     // const yecksin: any = this.findInsideMe("#yecksin");
     // const jair: any = this.findInsideMe("#jair");
     // const pollo: any = this.findInsideMe("#pollo");
