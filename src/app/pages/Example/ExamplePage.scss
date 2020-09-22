@@ -231,6 +231,17 @@ body{
 .section-habilidades {
   // background-color: white;
   padding: 100px 0px;
+  .progreso{
+    progress{
+      width: 100%;
+      height: 100px;
+    }
+    progress[value]::-webkit-progress-value {
+      transition: width 0.5s;
+      background: orange;
+  }
+  }
+
   .personaje{
     position: absolute;
     transition: all 0.5s ease;
@@ -623,6 +634,11 @@ body{
   grid-template-columns: 1fr 1fr;
 }
 
+.grid-1-400px-1 {
+  display: grid;
+  grid-template-columns: 1fr 400px 1fr;
+}
+
 .centrar {
   display: flex;
   align-items: center;
@@ -802,6 +818,7 @@ body::-webkit-scrollbar-thumb{
     width: 100%;
     height: 100%;
     .texto{
+
       h1{
         color:white;
         font-size: 7rem;
