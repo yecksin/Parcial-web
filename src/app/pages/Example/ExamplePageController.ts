@@ -15,42 +15,11 @@ export class ExamplePageController {
 
   start() {
     this.seccionHabilidades();
-    // var video:any;
-    //  video=<HTMLProgressElement>document.getElementById("video");
-    //  var audio = new Audio('https://firebasestorage.googleapis.com/v0/b/phaserserver-af18d.appspot.com/o/audio.mp3?alt=media&token=955f137b-7701-46b7-9763-4ae6118a0efd');
-    //  audio.play();
-    // video.muted = !video.muted;
+    this.pantallaDeCarga();
+
 
     // video.muted = !video.muted;
-    // const yecksin: any = this.findInsideMe("#yecksin");
-    // const jair: any = this.findInsideMe("#jair");
-    // const pollo: any = this.findInsideMe("#pollo");
-    // const tefa: any = this.findInsideMe("#tefa");
-    // yecksin.style.backgroundImage = "url('/assets/imagenes/yecksin.jpg')";
-    // jair.style.backgroundImage = "url('/assets/imagenes/jair.jpeg')";
-    // pollo.style.backgroundImage = "url('/assets/imagenes/pollo.jpeg')";
-    // tefa.style.backgroundImage = "url('/assets/imagenes/tefa.jpeg')";
 
-    //evento cuando la pagina est;á cargada
-    // const pantallaDeCarga: any = this.findInsideMe(".pantallaDeCarga");
-    // const pantallaDeCarga2: any = this.findInsideMe(".pantallaDeCarga2");
-    // const pantallaDeCarga3: any = this.findInsideMe(".pantallaDeCarga3");
-    // setTimeout(() => {
-    //     console.log("Cargado");
-    //     pantallaDeCarga3.style.left = "100vw";
-    //     // pantallaDeCarga2.style.left = "100vw";
-    //     setTimeout(() => {
-    //         console.log("Cargado");
-    //         // pantallaDeCarga.style.left = "0vw";
-    //         pantallaDeCarga2.style.left = "100vw";
-    //         setTimeout(() => {
-    //             console.log("Cargado");
-    //             pantallaDeCarga.style.left = "100vw";
-    //             // pantallaDeCarga2.style.left = "100vw";
-
-    //         }, 3000);
-    //     }, 3000);
-    // }, 3000);
 
     // window.addEventListener('load', (event) => {
     //     console.log('page is fully loaded');
@@ -173,21 +142,77 @@ this.menuClose();
   }
 
   menuAction(){
-    let audit = document.querySelector("#menu-btn");
-    audit.addEventListener("click", function () {
+    let menu = document.querySelector("#menu-btn");
+    menu.addEventListener("click", function () {
     document.querySelector('.menu-list').classList.toggle('menu-open');
     //   personaje.style.left = 0;
     });
   }
 
   menuClose(){
-    let audit = document.querySelector(".menu-list");
-    audit.addEventListener("click", function () {
+    let menu = document.querySelector(".menu-list");
+    menu.addEventListener("click", function () {
     document.querySelector('.menu-list').classList.remove('menu-open');
     //   personaje.style.left = 0;
     });
   }
+  pantallaDeCarga(){
+    const yecksin: any = this.findInsideMe("#yecksin");
+    const jair: any = this.findInsideMe("#jair");
+    const pollo: any = this.findInsideMe("#pollo");
+    const tefa: any = this.findInsideMe("#tefa");
+    yecksin.style.backgroundImage = "url('/assets/imagenes/yecksin.jpg')";
+    jair.style.backgroundImage = "url('/assets/imagenes/jair.jpeg')";
+    pollo.style.backgroundImage = "url('/assets/imagenes/pollo.jpeg')";
+    tefa.style.backgroundImage = "url('/assets/imagenes/tefa.jpeg')";
 
+    //evento cuando la pagina est;á cargada
+    const pantallaDeCarga: any = this.findInsideMe(".pantallaDeCarga");
+    const pantallaDeCarga2: any = this.findInsideMe(".pantallaDeCarga2");
+    const pantallaDeCarga3: any = this.findInsideMe(".pantallaDeCarga3");
+    const pantallaDeCarga4: any = this.findInsideMe(".pantallaDeCarga4");
+    setTimeout(() => {
+        console.log("Cargado");
+        pantallaDeCarga3.style.left = "100vw";
+        // pantallaDeCarga2.style.left = "100vw";
+        setTimeout(() => {
+            console.log("Cargado");
+            // pantallaDeCarga.style.left = "0vw";
+            pantallaDeCarga2.style.left = "100vw";
+            setTimeout(() => {
+                console.log("Cargado");
+                pantallaDeCarga.style.left = "100vw";
+                // pantallaDeCarga2.style.left = "100vw";
+                setTimeout(() => {
+                  console.log("Cargado");
+                  // pantallaDeCarga4.style.left = "100vw";
+                  // pantallaDeCarga2.style.left = "100vw";
+  
+              }, 3000);
+            }, 3000);
+        }, 3000);
+    }, 3000);
+
+    let menu = document.querySelector(".iniciar");
+    menu.addEventListener("click", function () {
+    console.log("musica");
+    // var audio = new Audio('https://firebasestorage.googleapis.com/v0/b/phaserserver-af18d.appspot.com/o/audio.mp3?alt=media&token=955f137b-7701-46b7-9763-4ae6118a0efd');
+    // audio.play();
+    pantallaDeCarga4.style.left = "100vw";
+
+    var video:any;
+    video=<HTMLProgressElement>document.getElementById("video");
+  
+   video.play();
+   setTimeout(() => {
+    pantallaDeCarga.style.display = "none";
+    pantallaDeCarga2.style.display = "none";
+    pantallaDeCarga3.style.display = "none";
+    pantallaDeCarga4.style.display = "none";
+  }, 1000);
+    });
+
+  }
   seccionHabilidades() {
     const personaje: any = this.findInsideMe(".personaje");
     

@@ -13,7 +13,7 @@ body {
 }
 .nav-container {
   position: fixed;
-  z-index: 10000;
+  z-index: 100;
   top: 0px;
   width: 100%;
   height: 60px;
@@ -1143,6 +1143,46 @@ body::-webkit-scrollbar-thumb {
     }
   }
 }
+.pantallaDeCarga4 {
+  z-index: 5000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  background-color: $Dark;
+  animation-delay: 1s;
+  // animation-name: example;
+  animation-duration: 4s;
+  .contenedor-load {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    .texto {
+      h1 {
+        color: white;
+        font-size: 7rem;
+      }
+      button {
+        font-size: 10rem;
+        cursor: pointer;
+        margin-top: 40px;
+        color: white !important;
+        padding: 30px 80px;
+        background-color: rgba(255, 255, 255, 0);
+        color: black;
+        border: 10px solid #ffffff; /* Green */
+        border-radius: 1000px;
+      }
+    }
+  }
+}
+
+
+
 @keyframes example {
   from {
     background-color: $Dark;
