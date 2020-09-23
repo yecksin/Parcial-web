@@ -119,8 +119,11 @@ this.menuClose();
       var currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar").style.top = "0";
+        document.querySelector('.menu-list').classList.remove('menu-open');
+        
       } else {
         document.getElementById("navbar").style.top = "-120px";
+        document.querySelector('.menu-list').classList.remove('menu-open');
       }
       prevScrollpos = currentScrollPos;
     });

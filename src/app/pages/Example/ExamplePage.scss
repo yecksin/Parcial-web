@@ -648,10 +648,18 @@ body {
       width: 100%;
       padding: 5px;
       background: white;
-      border: $Dark 2.5px dashed;
+      border: $Dark 2.5px solid;
       color: $Dark;
       margin-bottom: 10px;
       text-align: center;
+      border-radius: 20px;
+      &:focus{
+            outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+      }
     }
 
     button {
@@ -913,6 +921,10 @@ ul {
   &:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
+}
+
+.shadow-5 {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
 @keyframes desplazarArriba {
