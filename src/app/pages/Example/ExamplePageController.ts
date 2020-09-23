@@ -161,10 +161,10 @@ this.menuClose();
     const jair: any = this.findInsideMe("#jair");
     const pollo: any = this.findInsideMe("#pollo");
     const tefa: any = this.findInsideMe("#tefa");
-    yecksin.style.backgroundImage = "url('/assets/imagenes/yecksin.jpg')";
-    jair.style.backgroundImage = "url('/assets/imagenes/jair.jpeg')";
-    pollo.style.backgroundImage = "url('/assets/imagenes/pollo.jpeg')";
-    tefa.style.backgroundImage = "url('/assets/imagenes/tefa.jpeg')";
+    yecksin.style.backgroundImage = "url('https://firebasestorage.googleapis.com/v0/b/phaserserver-af18d.appspot.com/o/yecksin.jpg?alt=media&token=a31d2d0e-c74f-4b2f-bc5a-def508a30b21')";
+    jair.style.backgroundImage = "url('https://firebasestorage.googleapis.com/v0/b/phaserserver-af18d.appspot.com/o/jair.jpeg?alt=media&token=755b441e-541c-4e6b-9e85-14791307d9f6')";
+    pollo.style.backgroundImage = "url('https://firebasestorage.googleapis.com/v0/b/phaserserver-af18d.appspot.com/o/pollo.jpeg?alt=media&token=77ba741a-350d-4612-8169-d803fdf98c41')";
+    tefa.style.backgroundImage = "url('https://firebasestorage.googleapis.com/v0/b/phaserserver-af18d.appspot.com/o/tefa.jpeg?alt=media&token=a4177f77-f12e-4081-b72b-4c63404c8832')";
 
     //evento cuando la pagina est;á cargada
     const pantallaDeCarga: any = this.findInsideMe(".pantallaDeCarga");
