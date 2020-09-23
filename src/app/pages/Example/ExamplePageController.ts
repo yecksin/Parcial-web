@@ -14,8 +14,9 @@ export class ExamplePageController {
   }
 
   start() {
-
+    //animacion de habilidades
     this.seccionHabilidades();
+    //pantalla de carga
     this.pantallaDeCarga();
 
 
@@ -78,17 +79,19 @@ export class ExamplePageController {
     // document.querySelector('#send_top').onclick = function() {
     //     alert('bla bla');
     // }
+
+    //abrir y cerrar menu en 
     this.menuAction();
     this.menuClose();
 
     //Muestra el contenido de las secciones
     window.addEventListener("scroll", this.mostrarScroll);
+    //animacion de la barra menu
     window.addEventListener("scroll", function () {
       var currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar").style.top = "0";
         document.querySelector('.menu-list').classList.remove('menu-open');
-
       } else {
         document.getElementById("navbar").style.top = "-120px";
         document.querySelector('.menu-list').classList.remove('menu-open');
@@ -121,7 +124,7 @@ export class ExamplePageController {
       document.createRange().createContextualFragment(this.view),
     ];
   }
-  //animacion fadeinscroll
+  //Muestra el contenido de las secciones por scroll
   fade: any;
   mostrarScroll() {
     var h = window.innerHeight; // h obtiene la altura de la pantalla
@@ -193,7 +196,8 @@ export class ExamplePageController {
         }, 3000);
       }, 3000);
     }, 3000);
-    //
+
+    //reproducion del video
     let menu = document.querySelector(".iniciar");
     menu.addEventListener("click", function () {
       console.log("musica");
@@ -214,9 +218,9 @@ export class ExamplePageController {
     });
 
   }
+  //animacion de las progresiones
   seccionHabilidades() {
     const personaje: any = this.findInsideMe(".personaje");
-
     let progreso = <HTMLProgressElement>document.querySelector("#progreso");
     let progresoPorcentaje = document.querySelector("#progreso-porcentaje");
     let progrespNombre = document.querySelector("#progresp-nombre");
