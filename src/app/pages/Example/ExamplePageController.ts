@@ -14,7 +14,7 @@ export class ExamplePageController {
   }
 
   start() {
-    this.seccionHabilidades();
+    // this.seccionHabilidades();
     // var video:any;
     //  video=<HTMLProgressElement>document.getElementById("video");
     //  var audio = new Audio('https://firebasestorage.googleapis.com/v0/b/phaserserver-af18d.appspot.com/o/audio.mp3?alt=media&token=955f137b-7701-46b7-9763-4ae6118a0efd');
@@ -108,6 +108,8 @@ export class ExamplePageController {
     // document.querySelector('#send_top').onclick = function() {
     //     alert('bla bla');
     // }
+this.menuAction();
+
 
     //animacion fadeinscroll
 
@@ -167,75 +169,84 @@ export class ExamplePageController {
     console.log("Show plloo");
   }
 
-  seccionHabilidades() {
-    const personaje: any = this.findInsideMe(".personaje");
-    
-    let progreso = <HTMLProgressElement>document.querySelector("#progreso");
-    let progresoPorcentaje = document.querySelector("#progreso-porcentaje");
-    let progrespNombre = document.querySelector("#progresp-nombre");
-    //adution
-    let audit = document.querySelector(".audit");
-    audit.addEventListener("mouseover", function () {
-      progreso.value = 60;
-      progresoPorcentaje.innerHTML = "60%";
-      progrespNombre.innerHTML = "Adobe Audition";
+  menuAction(){
+    let audit = document.querySelector("#menu-btn");
+    audit.addEventListener("click", function () {
+console.log("hola gonorreas");
+document.querySelector('.menu-list').classList.toggle('menu-open');
     //   personaje.style.left = 0;
     });
-        //adution
-        let photo = document.querySelector(".photo");
-        photo.addEventListener("mouseover", function () {
-          progreso.value = 50;
-          progresoPorcentaje.innerHTML = "50%";
-          progrespNombre.innerHTML = "Adobe Photoshop";
-        //   personaje.style.left = 0;
-        });
-            //adution
-    let prem = document.querySelector(".prem");
-    prem.addEventListener("mouseover", function () {
-      progreso.value = 70;
-      progresoPorcentaje.innerHTML = "70%";
-      progrespNombre.innerHTML = "Adobe Premiere";
-    //   personaje.style.left = 0;
-    });
-        //adution
-        let illus = document.querySelector(".illus");
-        illus.addEventListener("mouseover", function () {
-          progreso.value = 40;
-          progresoPorcentaje.innerHTML = "40%";
-          progrespNombre.innerHTML = "Adobe Illustrator";
-        //   personaje.style.left = 0;
-        });
-            //adution
-    let img1 = document.querySelector(".Vscode");
-    img1.addEventListener("mouseover", function () {
-      progreso.value = 60;
-      progresoPorcentaje.innerHTML = "60%";
-      progrespNombre.innerHTML = "Visual Studio Code";
-    //   personaje.style.left = 0;
-    });
-        //adution
-        let img2 = document.querySelector(".chtml");
-        img2.addEventListener("mouseover", function () {
-          progreso.value = 80;
-          progresoPorcentaje.innerHTML = "80%";
-          progrespNombre.innerHTML = "Html";
-        //   personaje.style.left = 0;
-        });
-            //adution
-    let img4 = document.querySelector(".angular");
-    img4.addEventListener("mouseover", function () {
-      progreso.value = 70;
-      progresoPorcentaje.innerHTML = "70%";
-      progrespNombre.innerHTML = "Angular js";
-    //   personaje.style.left = 0;
-    });
-        //adution
-        let img3 = document.querySelector(".node");
-        img3.addEventListener("mouseover", function () {
-          progreso.value = 75;
-          progresoPorcentaje.innerHTML = "75%";
-          progrespNombre.innerHTML = "Node js";
-        //   personaje.style.left = 0;
-        });
   }
+
+  // seccionHabilidades() {
+  //   const personaje: any = this.findInsideMe(".personaje");
+    
+  //   let progreso = <HTMLProgressElement>document.querySelector("#progreso");
+  //   let progresoPorcentaje = document.querySelector("#progreso-porcentaje");
+  //   let progrespNombre = document.querySelector("#progresp-nombre");
+  //   //adution
+  //   let audit = document.querySelector(".audit");
+  //   audit.addEventListener("mouseover", function () {
+  //     progreso.value = 60;
+  //     progresoPorcentaje.innerHTML = "60%";
+  //     progrespNombre.innerHTML = "Adobe Audition";
+  //   //   personaje.style.left = 0;
+  //   });
+  //       //adution
+  //       let photo = document.querySelector(".photo");
+  //       photo.addEventListener("mouseover", function () {
+  //         progreso.value = 50;
+  //         progresoPorcentaje.innerHTML = "50%";
+  //         progrespNombre.innerHTML = "Adobe Photoshop";
+  //       //   personaje.style.left = 0;
+  //       });
+  //           //adution
+  //   let prem = document.querySelector(".prem");
+  //   prem.addEventListener("mouseover", function () {
+  //     progreso.value = 70;
+  //     progresoPorcentaje.innerHTML = "70%";
+  //     progrespNombre.innerHTML = "Adobe Premiere";
+  //   //   personaje.style.left = 0;
+  //   });
+  //       //adution
+  //       let illus = document.querySelector(".illus");
+  //       illus.addEventListener("mouseover", function () {
+  //         progreso.value = 40;
+  //         progresoPorcentaje.innerHTML = "40%";
+  //         progrespNombre.innerHTML = "Adobe Illustrator";
+  //       //   personaje.style.left = 0;
+  //       });
+  //           //adution
+  //   let img1 = document.querySelector(".Vscode");
+  //   img1.addEventListener("mouseover", function () {
+  //     progreso.value = 60;
+  //     progresoPorcentaje.innerHTML = "60%";
+  //     progrespNombre.innerHTML = "Visual Studio Code";
+  //   //   personaje.style.left = 0;
+  //   });
+  //       //adution
+  //       let img2 = document.querySelector(".chtml");
+  //       img2.addEventListener("mouseover", function () {
+  //         progreso.value = 80;
+  //         progresoPorcentaje.innerHTML = "80%";
+  //         progrespNombre.innerHTML = "Html";
+  //       //   personaje.style.left = 0;
+  //       });
+  //           //adution
+  //   let img4 = document.querySelector(".angular");
+  //   img4.addEventListener("mouseover", function () {
+  //     progreso.value = 70;
+  //     progresoPorcentaje.innerHTML = "70%";
+  //     progrespNombre.innerHTML = "Angular js";
+  //   //   personaje.style.left = 0;
+  //   });
+  //       //adution
+  //       let img3 = document.querySelector(".node");
+  //       img3.addEventListener("mouseover", function () {
+  //         progreso.value = 75;
+  //         progresoPorcentaje.innerHTML = "75%";
+  //         progrespNombre.innerHTML = "Node js";
+  //       //   personaje.style.left = 0;
+  //       });
+  // }
 }
