@@ -109,6 +109,7 @@ export class ExamplePageController {
     //     alert('bla bla');
     // }
 this.menuAction();
+this.menuClose();
 
 
     //animacion fadeinscroll
@@ -172,8 +173,15 @@ this.menuAction();
   menuAction(){
     let audit = document.querySelector("#menu-btn");
     audit.addEventListener("click", function () {
-console.log("hola gonorreas");
-document.querySelector('.menu-list').classList.toggle('menu-open');
+    document.querySelector('.menu-list').classList.toggle('menu-open');
+    //   personaje.style.left = 0;
+    });
+  }
+
+  menuClose(){
+    let audit = document.querySelector(".menu-list");
+    audit.addEventListener("click", function () {
+    document.querySelector('.menu-list').classList.remove('menu-open');
     //   personaje.style.left = 0;
     });
   }

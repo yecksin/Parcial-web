@@ -884,7 +884,7 @@ ul {
 }
 
 .centrar-vertical {
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
 }
@@ -1137,8 +1137,8 @@ body::-webkit-scrollbar-thumb {
   bottom: 0;
   left: -70vw;
   background-color: rgba(100, 104, 104, 0.473);
-  width: 70vw;
-  height: calc(100vh - 60px);
+  width: 50%;
+  height: calc(100% - 60px);
   transition: left 0.2s ease-in-out;
 
   div {
@@ -1155,4 +1155,5 @@ body::-webkit-scrollbar-thumb {
 
 .menu-open {
   left: 0vw;
+
 }
