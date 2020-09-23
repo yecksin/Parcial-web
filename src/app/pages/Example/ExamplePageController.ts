@@ -152,16 +152,15 @@ this.menuClose();
   }
   fade: any;
   mostrarScroll() {
-    var h = window.innerHeight;
+    var h = window.innerHeight; // h obtiene la altura de la pantalla
     this.fade = document.querySelectorAll(".fadeInScroll"); //todos lo que tiene la clase fadeinscroll
     let scrollTop = document.documentElement.scrollTop; // scroll en Y (vertical) contando desde su parte inicial
-    console.log(this.fade.length);
-    for (var i = 0; i < this.fade.length; i++) {
+    for (var i = 0; i < this.fade.length; i++) { // recorremos todos lo que tiene la clase fadeinscroll
       // animado.length es un array de todos los divs o compoenntes que tiene la clase .animado
       let alturaAnimado = this.fade[i].offsetTop; // ubicacion del div contnado desde su parte superior
-      if (alturaAnimado - h / 2 < scrollTop) {
+      if (alturaAnimado - h / 2 < scrollTop) { // si el div es menor a la pos del scroll lo hace aparecer con un fade in
         this.fade[i].style.opacity = 1;
-        this.fade[i].classList.add("trasladarArriba");
+        this.fade[i].classList.add("trasladarArriba"); //agrega la clase trasladar arriba para generar una animacion de movimiento
       }
     }
   }
