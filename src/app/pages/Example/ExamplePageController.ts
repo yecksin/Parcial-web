@@ -14,6 +14,7 @@ export class ExamplePageController {
   }
 
   start() {
+
     this.seccionHabilidades();
     this.pantallaDeCarga();
 
@@ -77,19 +78,17 @@ export class ExamplePageController {
     // document.querySelector('#send_top').onclick = function() {
     //     alert('bla bla');
     // }
-this.menuAction();
-this.menuClose();
+    this.menuAction();
+    this.menuClose();
 
-
-    //animacion fadeinscroll
-
+    //Muestra el contenido de las secciones
     window.addEventListener("scroll", this.mostrarScroll);
     window.addEventListener("scroll", function () {
       var currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar").style.top = "0";
         document.querySelector('.menu-list').classList.remove('menu-open');
-        
+
       } else {
         document.getElementById("navbar").style.top = "-120px";
         document.querySelector('.menu-list').classList.remove('menu-open');
@@ -101,7 +100,7 @@ this.menuClose();
 
     var prevScrollpos = window.pageYOffset;
   }
-
+  //retorna queryselector de lo que buscamos
   findInsideMe(selector: string, all = false) {
     const query = `#app #${this.component.id} ${selector}`;
     if (!all) {
@@ -110,18 +109,19 @@ this.menuClose();
       return document.querySelectorAll(query);
     }
   }
-
+  //carga las vista de lo componentes
   loadView() {
     require(`./${this.component.style}`);
     this.view = require(`./${this.component.view}`);
   }
-
+  //
   getView(): [string, DocumentFragment] {
     return [
       this.component.id,
       document.createRange().createContextualFragment(this.view),
     ];
   }
+  //animacion fadeinscroll
   fade: any;
   mostrarScroll() {
     var h = window.innerHeight; // h obtiene la altura de la pantalla
@@ -136,27 +136,28 @@ this.menuClose();
       }
     }
   }
-
+  //prueba
   showPersonaje() {
     console.log("Show plloo");
   }
-
-  menuAction(){
+  //abrir el menu hamburguesa
+  menuAction() {
     let menu = document.querySelector("#menu-btn");
     menu.addEventListener("click", function () {
-    document.querySelector('.menu-list').classList.toggle('menu-open');
-    //   personaje.style.left = 0;
+      document.querySelector('.menu-list').classList.toggle('menu-open');
+      //   personaje.style.left = 0;
     });
   }
-
-  menuClose(){
+  //cerrar menu hamburguesa
+  menuClose() {
     let menu = document.querySelector(".menu-list");
     menu.addEventListener("click", function () {
-    document.querySelector('.menu-list').classList.remove('menu-open');
-    //   personaje.style.left = 0;
+      document.querySelector('.menu-list').classList.remove('menu-open');
+      //   personaje.style.left = 0;
     });
   }
-  pantallaDeCarga(){
+  //animacion de pantalla de carga 
+  pantallaDeCarga() {
     const yecksin: any = this.findInsideMe("#yecksin");
     const jair: any = this.findInsideMe("#jair");
     const pollo: any = this.findInsideMe("#pollo");
@@ -172,50 +173,50 @@ this.menuClose();
     const pantallaDeCarga3: any = this.findInsideMe(".pantallaDeCarga3");
     const pantallaDeCarga4: any = this.findInsideMe(".pantallaDeCarga4");
     setTimeout(() => {
+      console.log("Cargado");
+      pantallaDeCarga3.style.left = "100vw";
+      // pantallaDeCarga2.style.left = "100vw";
+      setTimeout(() => {
         console.log("Cargado");
-        pantallaDeCarga3.style.left = "100vw";
-        // pantallaDeCarga2.style.left = "100vw";
+        // pantallaDeCarga.style.left = "0vw";
+        pantallaDeCarga2.style.left = "100vw";
         setTimeout(() => {
+          console.log("Cargado");
+          pantallaDeCarga.style.left = "100vw";
+          // pantallaDeCarga2.style.left = "100vw";
+          setTimeout(() => {
             console.log("Cargado");
-            // pantallaDeCarga.style.left = "0vw";
-            pantallaDeCarga2.style.left = "100vw";
-            setTimeout(() => {
-                console.log("Cargado");
-                pantallaDeCarga.style.left = "100vw";
-                // pantallaDeCarga2.style.left = "100vw";
-                setTimeout(() => {
-                  console.log("Cargado");
-                  // pantallaDeCarga4.style.left = "100vw";
-                  // pantallaDeCarga2.style.left = "100vw";
-  
-              }, 3000);
-            }, 3000);
-        }, 3000);
-    }, 3000);
+            // pantallaDeCarga4.style.left = "100vw";
+            // pantallaDeCarga2.style.left = "100vw";
 
+          }, 3000);
+        }, 3000);
+      }, 3000);
+    }, 3000);
+    //
     let menu = document.querySelector(".iniciar");
     menu.addEventListener("click", function () {
-    console.log("musica");
-    // var audio = new Audio('https://firebasestorage.googleapis.com/v0/b/phaserserver-af18d.appspot.com/o/audio.mp3?alt=media&token=955f137b-7701-46b7-9763-4ae6118a0efd');
-    // audio.play();
-    pantallaDeCarga4.style.left = "100vw";
+      console.log("musica");
+      // var audio = new Audio('https://firebasestorage.googleapis.com/v0/b/phaserserver-af18d.appspot.com/o/audio.mp3?alt=media&token=955f137b-7701-46b7-9763-4ae6118a0efd');
+      // audio.play();
+      pantallaDeCarga4.style.left = "100vw";
 
-    var video:any;
-    video=<HTMLProgressElement>document.getElementById("video");
-  
-   video.play();
-   setTimeout(() => {
-    pantallaDeCarga.style.display = "none";
-    pantallaDeCarga2.style.display = "none";
-    pantallaDeCarga3.style.display = "none";
-    pantallaDeCarga4.style.display = "none";
-  }, 1000);
+      var video: any;
+      video = <HTMLProgressElement>document.getElementById("video");
+
+      video.play();
+      setTimeout(() => {
+        pantallaDeCarga.style.display = "none";
+        pantallaDeCarga2.style.display = "none";
+        pantallaDeCarga3.style.display = "none";
+        pantallaDeCarga4.style.display = "none";
+      }, 1000);
     });
 
   }
   seccionHabilidades() {
     const personaje: any = this.findInsideMe(".personaje");
-    
+
     let progreso = <HTMLProgressElement>document.querySelector("#progreso");
     let progresoPorcentaje = document.querySelector("#progreso-porcentaje");
     let progrespNombre = document.querySelector("#progresp-nombre");
@@ -225,63 +226,63 @@ this.menuClose();
       progreso.value = 60;
       progresoPorcentaje.innerHTML = "60%";
       progrespNombre.innerHTML = "Adobe Audition";
-    //   personaje.style.left = 0;
+      //   personaje.style.left = 0;
     });
-        //adution
-        let photo = document.querySelector(".photo");
-        photo.addEventListener("mouseover", function () {
-          progreso.value = 50;
-          progresoPorcentaje.innerHTML = "50%";
-          progrespNombre.innerHTML = "Adobe Photoshop";
-        //   personaje.style.left = 0;
-        });
-            //adution
+    //adution
+    let photo = document.querySelector(".photo");
+    photo.addEventListener("mouseover", function () {
+      progreso.value = 50;
+      progresoPorcentaje.innerHTML = "50%";
+      progrespNombre.innerHTML = "Adobe Photoshop";
+      //   personaje.style.left = 0;
+    });
+    //adution
     let prem = document.querySelector(".prem");
     prem.addEventListener("mouseover", function () {
       progreso.value = 70;
       progresoPorcentaje.innerHTML = "70%";
       progrespNombre.innerHTML = "Adobe Premiere";
-    //   personaje.style.left = 0;
+      //   personaje.style.left = 0;
     });
-        //adution
-        let illus = document.querySelector(".illus");
-        illus.addEventListener("mouseover", function () {
-          progreso.value = 40;
-          progresoPorcentaje.innerHTML = "40%";
-          progrespNombre.innerHTML = "Adobe Illustrator";
-        //   personaje.style.left = 0;
-        });
-            //adution
+    //adution
+    let illus = document.querySelector(".illus");
+    illus.addEventListener("mouseover", function () {
+      progreso.value = 40;
+      progresoPorcentaje.innerHTML = "40%";
+      progrespNombre.innerHTML = "Adobe Illustrator";
+      //   personaje.style.left = 0;
+    });
+    //adution
     let img1 = document.querySelector(".Vscode");
     img1.addEventListener("mouseover", function () {
       progreso.value = 60;
       progresoPorcentaje.innerHTML = "60%";
       progrespNombre.innerHTML = "Visual Studio Code";
-    //   personaje.style.left = 0;
+      //   personaje.style.left = 0;
     });
-        //adution
-        let img2 = document.querySelector(".chtml");
-        img2.addEventListener("mouseover", function () {
-          progreso.value = 80;
-          progresoPorcentaje.innerHTML = "80%";
-          progrespNombre.innerHTML = "Html";
-        //   personaje.style.left = 0;
-        });
-            //adution
+    //adution
+    let img2 = document.querySelector(".chtml");
+    img2.addEventListener("mouseover", function () {
+      progreso.value = 80;
+      progresoPorcentaje.innerHTML = "80%";
+      progrespNombre.innerHTML = "Html";
+      //   personaje.style.left = 0;
+    });
+    //adution
     let img4 = document.querySelector(".angular");
     img4.addEventListener("mouseover", function () {
       progreso.value = 70;
       progresoPorcentaje.innerHTML = "70%";
       progrespNombre.innerHTML = "Angular js";
-    //   personaje.style.left = 0;
+      //   personaje.style.left = 0;
     });
-        //adution
-        let img3 = document.querySelector(".node");
-        img3.addEventListener("mouseover", function () {
-          progreso.value = 75;
-          progresoPorcentaje.innerHTML = "75%";
-          progrespNombre.innerHTML = "Node js";
-        //   personaje.style.left = 0;
-        });
+    //adution
+    let img3 = document.querySelector(".node");
+    img3.addEventListener("mouseover", function () {
+      progreso.value = 75;
+      progresoPorcentaje.innerHTML = "75%";
+      progrespNombre.innerHTML = "Node js";
+      //   personaje.style.left = 0;
+    });
   }
 }
