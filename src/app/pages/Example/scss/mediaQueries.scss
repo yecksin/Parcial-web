@@ -94,6 +94,90 @@
             }
         } 
     }
+    .pantallaDeCarga{
+      .contenedor-load {
+        
+        .texto {
+          h1 {
+            font-size: 5rem;
+          }
+          .grilla {
+            grid-template-columns: 1fr 1fr ;
+            .imagen {
+            
+              .img {
+                width: 150px;
+                height: 150px;
+              }
+              h2 {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .pantallaDeCarga2 {
+      .contenedor-load {
+        .texto {
+          h1 {
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+    .pantallaDeCarga3 {
+      #preloader_1 {
+        top: 35%;
+        height: 200px;
+        width: 200;
+      }
+      #preloader_1 span {
+        left: 340px;
+        width: 10px;
+      }
+      #preloader_1 span:nth-child(2) {
+        left: 350px;
+        width: 10px;
+        
+      }
+      #preloader_1 span:nth-child(3) {
+        left: 360px;
+        width: 10px;
+        
+      }
+      #preloader_1 span:nth-child(4) {
+        left: 370px;
+        width: 10px;
+        
+      }
+      #preloader_1 span:nth-child(5) {
+        left: 380px;
+        width: 10px;
+      }
+      .contenedor-load {
+        .texto {
+          h1 {
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+    .pantallaDeCarga4 {
+      .contenedor-load {
+        .texto {
+          h1 {
+            font-size: 5rem;
+          }
+          button {
+            font-size: 7rem;
+            
+          }
+        }
+      }
+    }
+    
+    
   }
 }
 //celular
@@ -133,6 +217,87 @@
             }
         } 
     }
+    .pantallaDeCarga{
+      .contenedor-load {
+        .texto {
+          h1 {
+            font-size: 2rem;
+          }
+          .grilla {
+            grid-template-columns: 1fr  ;
+            .imagen {
+              .img {
+                width: 100px;
+                height: 100px;
+              }
+              h2 {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .pantallaDeCarga2 {
+      .contenedor-load {
+        .texto {
+          h1 {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+    .pantallaDeCarga3 {
+      #preloader_1 {
+        top: 30%;
+        height: 200px;
+        width: 200;
+      }
+      #preloader_1 span {
+        left: 173px;
+        width: 8px;
+      }
+      #preloader_1 span:nth-child(2) {
+        left: 184px;
+        width: 8px;
+        
+      }
+      #preloader_1 span:nth-child(3) {
+        left: 197px;
+        width: 8px;
+        
+      }
+      #preloader_1 span:nth-child(4) {
+        left: 210px;
+        width: 8px;
+        
+      }
+      #preloader_1 span:nth-child(5) {
+        left: 320px;
+        width: 8px;
+      }
+      .contenedor-load {
+        .texto {
+          h1 {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+    .pantallaDeCarga4 {
+      .contenedor-load {
+        .texto {
+          h1 {
+            font-size: 2rem;
+          }
+          button {
+            font-size: 3rem;
+            
+          }
+        }
+      }
+    }
+    
 
     
 
