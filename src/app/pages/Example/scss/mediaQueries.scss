@@ -1,120 +1,137 @@
-@media(max-width: 1920px){
-    body{
-        //  background-color: rgb(93, 250, 106); 
-    }
-
-
- 
+@media (max-width: 1920px) {
+  body {
+    //  background-color: rgb(93, 250, 106);
+  }
 }
-@media(max-width: 1400px){
-    body{
-        //  background-color: yellow; 
-         .container{
-            padding: 60px 100px;
+@media (max-width: 1400px) {
+  body {
+    //  background-color: yellow;
+    .container {
+      padding: 60px 50px;
+    }
+    .section-experiencias {
+
+        .container-2 {
+
+          padding: 60px 0px !important;
         }
     }
+  }
 
-    .titulo{
-        font-size: 3rem !important;
-    }
-
-
- 
+  .titulo {
+    font-size: 3rem !important;
+  }
 }
 //tablet
-@media(max-width: 1024px){
-    body{
-        // background-color: rgb(255, 115, 0); 
-        .container{
-            display: unset;
-            padding: 60px 15px;
-        }
-        .galeria{
-            grid-template-columns: 1fr !important;
-            // grid-template-rows: 1fr ;
-        }
-        .grid-2{
-            grid-template-columns: 1fr !important;
-        }
-        .texto {
-            margin-top: 50px;
-        }
-        .nav-container{
-            // padding: 0px 10px;
-            .nav{
-                display: none;
-            }
-        .icon-menu{
-            height: 60px;
-            display: block;
-            fill: white !important;
-        }
-            .item{
-                font-size: 1rem !important;
-            }
-            
-           
-        }
-
-        .menu-list{
-           display: unset;
-          
-           div{
-             a{
-               font-size: 2rem;
-               line-height:100px;
-             }
-           }
-          }
-
-          .section-presentacion {
-              padding: 100px 0px 0px 0px;
-            .video{
-                video{
-                    position: relative !important;
-                    left: 0 !important;
-                    width: 80%;
-                    top: 40px;
-                }
-               
-            }
-          }
-
+@media (max-width: 1024px) {
+  body {
+    // background-color: rgb(255, 115, 0);
+    .container {
+      display: unset;
+      padding: 60px 15px;
     }
-  
- 
+    .container-2 {
+        padding: 60px 10px;
+      }
+    .galeria {
+      grid-template-columns: 1fr !important;
+      // grid-template-rows: 1fr ;
+    }
+    .grid-2 {
+      grid-template-columns: 1fr !important;
+    }
+    .texto {
+      margin-top: 50px;
+    }
+    .nav-container {
+      // padding: 0px 10px;
+      .nav {
+        display: none;
+      }
+      .icon-menu {
+        height: 60px;
+        display: block;
+        fill: white !important;
+      }
+      .item {
+        font-size: 1rem !important;
+      }
+    }
 
+    .menu-list {
+      display: unset;
+
+      div {
+        a {
+          font-size: 2rem;
+          line-height: 100px;
+        }
+      }
+    }
+
+    .section-presentacion {
+      padding: 100px 0px 0px 0px;
+      .video {
+        video {
+          position: relative !important;
+          left: 0 !important;
+          width: 80%;
+          top: 40px;
+        }
+      }
+    }
+    .section-habilidades{
+        .container-3{
+            padding: 60px 0px;
+        }
+        .progreso{
+            progress{
+                width: 80%;
+            }
+        } 
+    }
+  }
 }
 //celular
-@media(max-width: 600px){
-    body{
-        //  background-color: rgb(255, 0, 0);
-         .menu-list{
-           
-          
-            div{
-              a{
-                font-size: 1.3rem;
-                line-height:50px;
-              }
-            }
-           }
-           .container-2 {
-            padding: 60px 0px;
-           
-          }
-          .section-presentacion {
-            .video{
-                video{
-                    position: relative !important;
-                    left: 0 !important;
-                    width: 100%;
-                }
-               
-            }
-          }
+@media (max-width: 600px) {
+  body {
+    //  background-color: rgb(255, 0, 0);
+    .titulo-seccion {
+      font-size: 3rem;
     }
-  
+    .menu-list {
+      div {
+        a {
+          font-size: 1.3rem;
+          line-height: 50px;
+        }
+      }
+    }
+    .container-2 {
+      padding: 60px 0px;
+    }
+    .section-presentacion {
+      .video {
+        video {
+          position: relative !important;
+          left: 0 !important;
+          width: 100%;
+        }
+      }
+    }
+    .section-habilidades{
+        .container-3{
+            padding: 60px 0px;
+        }
+        .progreso{
+            progress{
+                width: 80%;
+            }
+        } 
+    }
 
-  
+    
+
+
+  }
 }
