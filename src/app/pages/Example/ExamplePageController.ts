@@ -106,10 +106,10 @@ export class ExamplePageController {
     const pollo: any = this.findInsideMe("#pollo");
     const tefa: any = this.findInsideMe("#tefa");
     //asignacion de imagenes
-    yecksin.style.backgroundImage = "url('https://firebasestorage.googleapis.com/v0/b/phaserserver-af18d.appspot.com/o/yecksin.jpg?alt=media&token=a31d2d0e-c74f-4b2f-bc5a-def508a30b21')";
-    jair.style.backgroundImage = "url('https://firebasestorage.googleapis.com/v0/b/phaserserver-af18d.appspot.com/o/jair.jpeg?alt=media&token=755b441e-541c-4e6b-9e85-14791307d9f6')";
-    pollo.style.backgroundImage = "url('https://firebasestorage.googleapis.com/v0/b/phaserserver-af18d.appspot.com/o/pollo.jpeg?alt=media&token=77ba741a-350d-4612-8169-d803fdf98c41')";
-    tefa.style.backgroundImage = "url('https://firebasestorage.googleapis.com/v0/b/phaserserver-af18d.appspot.com/o/tefa.jpeg?alt=media&token=a4177f77-f12e-4081-b72b-4c63404c8832')";
+    yecksin.style.backgroundImage = "url('https://firebasestorage.googleapis.com/v0/b/libros-83711.appspot.com/o/yecksin.jpg?alt=media&token=d6f75e21-4e50-4d98-9eb1-0f2d3b0ecbc5')";
+    jair.style.backgroundImage = "url('https://firebasestorage.googleapis.com/v0/b/libros-83711.appspot.com/o/jair.jpeg?alt=media&token=be65b6d3-b018-4880-9a72-8d2de108b4f8')";
+    pollo.style.backgroundImage = "url('https://firebasestorage.googleapis.com/v0/b/libros-83711.appspot.com/o/pollo.jpeg?alt=media&token=f34cca24-640d-4a10-b1ba-3950e5e0fa82')";
+    tefa.style.backgroundImage = "url('https://firebasestorage.googleapis.com/v0/b/libros-83711.appspot.com/o/tefa.jpeg?alt=media&token=d2dfa660-520c-44d8-b6df-246c954cbeca')";
 
     //evento cuando la pagina est;á cargada
     const pantallaDeCarga: any = this.findInsideMe(".pantallaDeCarga");
