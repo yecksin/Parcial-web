@@ -999,7 +999,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
   // width: 10px !important;
-  // background-color: none !important;
+  background-color: $Dark !important;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -1010,8 +1010,9 @@ body::-webkit-scrollbar-thumb {
   // border-right: white solid 2px;
   // border-left: white solid 2px;
   // transition: all .3s ease;
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
+  background-color: $Danger;
+  // outline: 1px solid $Danger;
+  border-radius: 10px;
 }
 
 .pantallaDeCarga {
