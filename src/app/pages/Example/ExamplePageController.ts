@@ -18,85 +18,24 @@ export class ExamplePageController {
     this.seccionHabilidades();
     //pantalla de carga
     this.pantallaDeCarga();
-
-
-    // video.muted = !video.muted;
-
-
-    // window.addEventListener('load', (event) => {
-    //     console.log('page is fully loaded');
-    //   });
-    //   window.addEventListener("DOMContentLoaded", function(event) {
-    //     console.log("DOM fully loaded and parsed");
-    //   });
-
-    //   window.addEventListener("scroll", this.mostrarScroll);
-    // const checkpoint = 300;
-
-    // let opacity = 0;
-    // window.addEventListener("scroll", () => {
-    //     const box: any = this.findInsideMe(".box");
-    //     console.log(window.pageYOffset + " " + box.getBoundingClientRect().top);
-    //     const currentScroll = window.pageYOffset;
-    //     if (currentScroll <= checkpoint) {
-    //         opacity = 1 - currentScroll / checkpoint;
-    //     } else {
-    //         opacity = 0;
-    //     }
-
-    //     box.style.opacity = opacity;
-    // });
-
-    // const box: any = this.findInsideMe(".box");
-    // const TDBox: any = this.findInsideMe(".TDBox");
-    // const clouds: any = this.findInsideMe(".cloud", true);
-    // window.onscroll = (_: any) => {
-    //     console.log(`X: ${window.scrollX} Y: ${window.scrollY}`)
-    //     const p = (window.scrollY / window.innerHeight) * 100;
-    //     box.style.left = `${p}%`;
-    //     box.style.opacity = `${p / 100}`;
-
-    //     clouds[0].style.left = `${p * 2}%`;
-    //     clouds[1].style.left = `${p * 1.3}%`;
-
-    //     if (window.scrollY >= 340) {
-    //         TDBox.style.opacity = 1;
-    //         if (window.scrollY >= 350) {
-    //             TDBox.style.transform = `rotateY(${window.scrollY}deg)`;
-    //         }
-    //     } else {
-    //         TDBox.style.opacity = 0;
-    //     }
-    // }
-    // let element: HTMLElement =  document.querySelector(".audit")as HTMLElement;
-    // element.click();
-    // console.log(element.click());
-
-    // document.querySelector(".audit").onclick = () => {
-
-    // };
-
-    // document.querySelector('#send_top').onclick = function() {
-    //     alert('bla bla');
-    // }
-
+    
     //abrir y cerrar menu en 
     this.menuAction();
     this.menuClose();
 
     //Muestra el contenido de las secciones
     window.addEventListener("scroll", this.mostrarScroll);
-    //animacion de la barra menu
+    //animacion de la barra menu (muestra/oculta)
     window.addEventListener("scroll", function () {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
-        document.querySelector('.menu-list').classList.remove('menu-open');
-      } else {
-        document.getElementById("navbar").style.top = "-120px";
-        document.querySelector('.menu-list').classList.remove('menu-open');
+      var currentScrollPos = window.pageYOffset;//posicion del scroll, desde su parte superior
+      if (prevScrollpos > currentScrollPos) {//verifica si el scroll se devolvio hacia arriba
+        document.getElementById("navbar").style.top = "0";//windows
+        document.querySelector('.menu-list').classList.remove('menu-open');//movil
+      } else {//oculta el menu cuando el scroll baja
+        document.getElementById("navbar").style.top = "-120px";// windows
+        document.querySelector('.menu-list').classList.remove('menu-open');//movil
       }
-      prevScrollpos = currentScrollPos;
+      prevScrollpos = currentScrollPos;//asignar posicion actual
     });
 
     //animacion ocultar nav en scroll
@@ -143,28 +82,30 @@ export class ExamplePageController {
   showPersonaje() {
     console.log("Show plloo");
   }
-  //abrir el menu hamburguesa
+  //abrir con el menu con icono hamburguesa
   menuAction() {
-    let menu = document.querySelector("#menu-btn");
-    menu.addEventListener("click", function () {
-      document.querySelector('.menu-list').classList.toggle('menu-open');
+    let menu = document.querySelector("#menu-btn");//asignar los componetes de menu-btn
+    menu.addEventListener("click", function () {//iteraccion click con icono 
+      document.querySelector('.menu-list').classList.toggle('menu-open');//muestra el menu
       //   personaje.style.left = 0;
     });
   }
-  //cerrar menu hamburguesa
+  //cerrar menu con el icono hamburguesa
   menuClose() {
-    let menu = document.querySelector(".menu-list");
-    menu.addEventListener("click", function () {
-      document.querySelector('.menu-list').classList.remove('menu-open');
+    let menu = document.querySelector(".menu-list");//asignar los componetes de menu-btn
+    menu.addEventListener("click", function () {//iteraccion click con las secciones
+      document.querySelector('.menu-list').classList.remove('menu-open');//cierra el menu
       //   personaje.style.left = 0;
     });
   }
   //animacion de pantalla de carga 
   pantallaDeCarga() {
+    //instacion de div para la imagnes
     const yecksin: any = this.findInsideMe("#yecksin");
     const jair: any = this.findInsideMe("#jair");
     const pollo: any = this.findInsideMe("#pollo");
     const tefa: any = this.findInsideMe("#tefa");
+    //asignacion de imagenes
     yecksin.style.backgroundImage = "url('https://firebasestorage.googleapis.com/v0/b/phaserserver-af18d.appspot.com/o/yecksin.jpg?alt=media&token=a31d2d0e-c74f-4b2f-bc5a-def508a30b21')";
     jair.style.backgroundImage = "url('https://firebasestorage.googleapis.com/v0/b/phaserserver-af18d.appspot.com/o/jair.jpeg?alt=media&token=755b441e-541c-4e6b-9e85-14791307d9f6')";
     pollo.style.backgroundImage = "url('https://firebasestorage.googleapis.com/v0/b/phaserserver-af18d.appspot.com/o/pollo.jpeg?alt=media&token=77ba741a-350d-4612-8169-d803fdf98c41')";
@@ -175,6 +116,7 @@ export class ExamplePageController {
     const pantallaDeCarga2: any = this.findInsideMe(".pantallaDeCarga2");
     const pantallaDeCarga3: any = this.findInsideMe(".pantallaDeCarga3");
     const pantallaDeCarga4: any = this.findInsideMe(".pantallaDeCarga4");
+    //animacion
     setTimeout(() => {
       console.log("Cargado");
       pantallaDeCarga3.style.left = "100vw";
@@ -198,18 +140,18 @@ export class ExamplePageController {
     }, 3000);
 
     //reproducion del video
-    let menu = document.querySelector(".iniciar");
+    let menu = document.querySelector(".iniciar");//seleciona el boton iniciar
     menu.addEventListener("click", function () {
       console.log("musica");
       // var audio = new Audio('https://firebasestorage.googleapis.com/v0/b/phaserserver-af18d.appspot.com/o/audio.mp3?alt=media&token=955f137b-7701-46b7-9763-4ae6118a0efd');
       // audio.play();
-      pantallaDeCarga4.style.left = "100vw";
+      pantallaDeCarga4.style.left = "100vw";//mover la pantalla de carga hacia la derecha
 
       var video: any;
-      video = <HTMLProgressElement>document.getElementById("video");
+      video = <HTMLProgressElement>document.getElementById("video");//instacia la etiqueta del video
 
-      video.play();
-      setTimeout(() => {
+      video.play();//repoduce el video cuando interactua con iniciar
+      setTimeout(() => {//ocultar la pantalla de carga
         pantallaDeCarga.style.display = "none";
         pantallaDeCarga2.style.display = "none";
         pantallaDeCarga3.style.display = "none";
@@ -221,10 +163,11 @@ export class ExamplePageController {
   //animacion de las progresiones
   seccionHabilidades() {
     const personaje: any = this.findInsideMe(".personaje");
-    let progreso = <HTMLProgressElement>document.querySelector("#progreso");
-    let progresoPorcentaje = document.querySelector("#progreso-porcentaje");
-    let progrespNombre = document.querySelector("#progresp-nombre");
-    //adution
+    let progreso = <HTMLProgressElement>document.querySelector("#progreso");//instacia la barra de progreso
+    let progresoPorcentaje = document.querySelector("#progreso-porcentaje");//instacia etiqueta del texto porcentaje
+    let progrespNombre = document.querySelector("#progresp-nombre");//instacia el titulo de la habilidad
+    //en los siguientes eventos cambia el valor de porcentaje, nombre de la habilidad y la barra de progreso
+    //adution animacion 
     let audit = document.querySelector(".audit");
     audit.addEventListener("mouseover", function () {
       progreso.value = 60;
@@ -232,7 +175,7 @@ export class ExamplePageController {
       progrespNombre.innerHTML = "Adobe Audition";
       //   personaje.style.left = 0;
     });
-    //adution
+    //photoshop
     let photo = document.querySelector(".photo");
     photo.addEventListener("mouseover", function () {
       progreso.value = 50;
@@ -240,7 +183,7 @@ export class ExamplePageController {
       progrespNombre.innerHTML = "Adobe Photoshop";
       //   personaje.style.left = 0;
     });
-    //adution
+    //premier
     let prem = document.querySelector(".prem");
     prem.addEventListener("mouseover", function () {
       progreso.value = 70;
@@ -248,7 +191,7 @@ export class ExamplePageController {
       progrespNombre.innerHTML = "Adobe Premiere";
       //   personaje.style.left = 0;
     });
-    //adution
+    //ilustrator
     let illus = document.querySelector(".illus");
     illus.addEventListener("mouseover", function () {
       progreso.value = 40;
@@ -256,7 +199,7 @@ export class ExamplePageController {
       progrespNombre.innerHTML = "Adobe Illustrator";
       //   personaje.style.left = 0;
     });
-    //adution
+    //Vscode
     let img1 = document.querySelector(".Vscode");
     img1.addEventListener("mouseover", function () {
       progreso.value = 60;
@@ -264,7 +207,7 @@ export class ExamplePageController {
       progrespNombre.innerHTML = "Visual Studio Code";
       //   personaje.style.left = 0;
     });
-    //adution
+    //chtml
     let img2 = document.querySelector(".chtml");
     img2.addEventListener("mouseover", function () {
       progreso.value = 80;
@@ -272,7 +215,7 @@ export class ExamplePageController {
       progrespNombre.innerHTML = "Html";
       //   personaje.style.left = 0;
     });
-    //adution
+    //angular
     let img4 = document.querySelector(".angular");
     img4.addEventListener("mouseover", function () {
       progreso.value = 70;
@@ -280,7 +223,7 @@ export class ExamplePageController {
       progrespNombre.innerHTML = "Angular js";
       //   personaje.style.left = 0;
     });
-    //adution
+    //node
     let img3 = document.querySelector(".node");
     img3.addEventListener("mouseover", function () {
       progreso.value = 75;
